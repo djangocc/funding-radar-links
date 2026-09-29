@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funding Radar Links</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>套利雷达链接</h1>
+    <p>在套利卡片的标的旁添加“雷达”入口。</p>
+    <form id="settings">
+      <label for="site-url">套利看板地址</label>
+      <input id="site-url" type="url" placeholder="https://dashboard.example.com" autocomplete="url" required>
+      <small>填写站点首页或当前看板地址均可。扩展只在这个站点上运行。</small>
+      <label for="radar-url">Radar 站点地址</label>
+      <input id="radar-url" type="url" placeholder="https://47.79.37.237" autocomplete="url" required>
+      <small>默认使用当前 IP 地址；扩展会在该地址下打开 /radar/。</small>
+      <button type="submit">保存并启用</button>
+    </form>
+    <output id="status" role="status" aria-live="polite"></output>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
